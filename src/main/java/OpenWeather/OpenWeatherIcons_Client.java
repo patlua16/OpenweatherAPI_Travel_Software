@@ -44,7 +44,14 @@ public class OpenWeatherIcons_Client {
        URL url = new URL("http://openweathermap.org/img/wn/"+kuerzel+"@2x.png");
        image = ImageIO.read(url);
        ImageIcon icon = new ImageIcon(image);
+        
        return icon;
+    }
+    
+    public static void main(String[] args) throws IOException {
+        OpenWeatherIcons_Client owc = new OpenWeatherIcons_Client();
+        ImageIcon icon = owc.getIcon("01d");
+        System.out.println(icon.toString());
     }
   
     
